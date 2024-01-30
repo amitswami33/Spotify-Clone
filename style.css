@@ -43,7 +43,7 @@ nav ul li{
     font-family: 'Varela Round', sans-serif;
     display: flex;
     margin: 23px auto;
-    width: 70%;
+    width: 90%;
     border-radius: 12px;
     padding: 34px;
     background-image: url('bg.jpg');
@@ -54,7 +54,7 @@ nav ul li{
 .bottom{
         position: sticky;
         bottom: 0;
-        height:130px;
+        height: auto;
         background-color: black;
         color: white;
         display: flex;
@@ -73,12 +73,12 @@ nav ul li{
 }
 
 #myProgressBar{
-    width:80vw;
+    width: 90vw;
     cursor: pointer;
 }
 
 .songItemContainer{
-    margin-top: 74px;
+    margin-top: 24px;
 }
 
 .songItem{
@@ -93,20 +93,21 @@ nav ul li{
 }
 
 .songItem img{
-    width: 43px;
-    margin: 0 23px;
-    border-radius: 34px;
+    width: 50px; 
+    height: 50px; 
+    margin-right: 10px; 
+    border-radius: 50%;
 }
 
 .timestamp{
-    margin: 0 23px;
+    margin-right: 10px;
     
 }
 
 .timestamp i{
     cursor: pointer;
 }
-.songInfo{
+.songInfo {
     position: absolute;
     left: 10vw;
     font-family: 'Varela Round', sans-serif;
@@ -114,4 +115,60 @@ nav ul li{
 .songInfo img{
     opacity: 0;
     transition: opacity 0.3s ease-in  
+}
+.songInfo span {
+    margin-top: 8px; 
+    font-size: 1.2rem; 
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .bottom {
+        height: auto;
+    }
+
+    .icons {
+        flex-direction: row;
+    }
+
+    #myProgressBar {
+        width: 80vw;
+    }
+
+    .songItemContainer {
+        margin-top: 12px;
+    }
+
+    .songItem {
+        height: 60px;
+        padding: 0 8px;
+    }
+
+    .songItem img {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+    }
+
+    .timestamp {
+        margin-right: 8px;
+    }
+
+    .songInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0;
+        left: 5vw; 
+    }
+    
+    
+    .songInfo span {
+        margin-top: 8px;
+        font-size: 1.2rem; 
+        margin-left: 8px; 
+    }
 }
