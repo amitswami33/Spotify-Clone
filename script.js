@@ -8,19 +8,21 @@ let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
 let masterSongName=document.getElementById('masterSongName')
 let songItems= Array.from(document.getElementsByClassName('songItem'));
+let playButtons = Array.from(document.getElementsByClassName('songItemPlay'));  
 
 let songs=[
-    {songName: "Shayad", filePath:"songs/1.mp3", coverPath: "covers/1.jpg"},
-    {songName: "Ve Kamleya", filePath:"songs/2.mp3", coverPath: "covers/2.jpg"},
-    {songName: "Kalaastar", filePath:"songs/3.mp3", coverPath: "covers/3.jpg"},
-    {songName: "Mera Bhai", filePath:"songs/4.mp3", coverPath: "covers/4.jpg"},
-    {songName: "Ved Tujha", filePath:"songs/5.mp3", coverPath: "covers/5.jpg"},
-    {songName: "Yaad Hai Na", filePath:"songs/6.mp3", coverPath: "covers/6.jpg"},
+    {songName: "Shayad - Arijit Singh", filePath:"songs/1.mp3", coverPath: "covers/1.jpg"},
+    {songName: "Ve Kamleya - Arijit Singh", filePath:"songs/2.mp3", coverPath: "covers/2.jpg"},
+    {songName: "Kalaastar - Yo Yo Honey Singh", filePath:"songs/3.mp3", coverPath: "covers/3.jpg"},
+    {songName: "Mera Bhai - DIVINE", filePath:"songs/4.mp3", coverPath: "covers/4.jpg"},
+    {songName: "Ved Tujha - Ajay Atul", filePath:"songs/5.mp3", coverPath: "covers/5.jpg"},
+    {songName: "Yaad Hai Na - Arijit Singh", filePath:"songs/6.mp3", coverPath: "covers/6.jpg"},
     {songName: "Phir na Aisi Raat Aayegi", filePath:"songs/7.mp3", coverPath: "covers/7.jpg"},
-    {songName: "Ram Siya Ram", filePath:"songs/8.mp3", coverPath: "covers/8.jpg"},
+    {songName: "Ram Siya Ram - Sachet Tandon", filePath:"songs/8.mp3", coverPath: "covers/8.jpg"},
     {songName: "Tujhe Kitna Chahane Lage", filePath:"songs/9.mp3", coverPath: "covers/9.jpg"},
-    {songName: "Ajab Si", filePath:"songs/10.mp3", coverPath: "covers/10.jpg"}
-]
+    {songName: "Ajab Si - KK", filePath:"songs/10.mp3", coverPath: "covers/10.jpg"}
+];
+
 
 songItems.forEach((element, i)=>{
 
@@ -44,7 +46,8 @@ masterPlay.addEventListener('click',()=>{
         masterPlay.classList.add('fa-circle-play');
         gif.style.opacity=0;
     }
-})
+});
+
 
 //Listen to events
 audioElement.addEventListener('timeupdate',()=>{
@@ -99,7 +102,7 @@ document.getElementById('next').addEventListener('click',()=>{
     masterPlay.classList.add('fa-circle-pause');
 })
 
-document.getElementById('previuos').addEventListener('click',()=>{
+document.getElementById('previous').addEventListener('click',()=>{
     if(songIndex<=0)
     {
         songIndex=0;
