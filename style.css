@@ -46,7 +46,7 @@ nav ul li{
     width: 90%;
     border-radius: 12px;
     padding: 34px;
-    background-image: url('bg.jpg');
+    background-image: url('wp.webp');
     background-size: cover;
     
 }
@@ -108,16 +108,18 @@ nav ul li{
     cursor: pointer;
 }
 .songInfo {
-    position: absolute;
-    left: 10vw;
+    position: relative;
     font-family: 'Varela Round', sans-serif;
+    display: flex;
+    align-items: center;
 }
-.songInfo img{
+.songInfo img {
     opacity: 0;
-    transition: opacity 0.3s ease-in  
+    transition: opacity 0.3s ease-in;
+    width: 42px; 
 }
 .songInfo span {
-    margin-top: 8px; 
+    margin-left: 10px; 
     font-size: 1.2rem; 
 }
 @media only screen and (max-width: 768px) {
@@ -158,17 +160,13 @@ nav ul li{
     }
 
     .songInfo {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 0;
-        left: 5vw; 
+        position: relative; 
+        left: 0; 
     }
     
     
     .songInfo span {
-        margin-top: 8px;
-        font-size: 1.2rem; 
-        margin-left: 8px; 
+        margin-top: 0;
+        font-size: 1rem; 
     }
 }
